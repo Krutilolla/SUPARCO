@@ -1,0 +1,11 @@
+name: suparco
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - fastapi
+      - uvicorn
+      - pillow
+      - numpy
+      - requests
+      # add actual pip libraries your project needs

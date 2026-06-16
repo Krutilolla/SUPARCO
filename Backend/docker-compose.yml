@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: suparco-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: >
+      conda run -n suparco uvicorn Main:app
+      --host 0.0.0.0
+      --port 8000
+      --reload
+

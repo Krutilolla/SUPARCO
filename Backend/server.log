@@ -1,0 +1,159 @@
+nohup: ignoring input
+INFO:     Will watch for changes in these directories: ['/home/Ubuntu/SUPARCO/Backend']
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Started reloader process [147112] using StatReload
+mkdir -p failed for path /home/Ubuntu/.config/matplotlib: [Errno 13] Permission denied: '/home/Ubuntu/.config/matplotlib'
+Matplotlib created a temporary cache directory at /tmp/matplotlib-rejtt639 because there was an issue with the default path (/home/Ubuntu/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+INFO:     Started server process [147115]
+INFO:     Waiting for application startup.
+/home/Ubuntu/SUPARCO/Backend/model_weights/qwen
+/home/Ubuntu/SUPARCO/Backend/model_weights/processor
+True
+1
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.18s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:10<00:00,  5.26s/it]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+INFO:     Application startup complete.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+cuda:0
+/home/Ubuntu/SUPARCO/Backend/model_weights/dino_model
+/home/Ubuntu/SUPARCO/Backend/model_weights/dino_processor
+/home/Ubuntu/SUPARCO/Backend/model_weights/sam_model
+/home/Ubuntu/SUPARCO/Backend/model_weights/sam_processor
+Using device: cuda
+Using device: cuda
+['The image from GoogleEarth shows an aerial view of an airport with three airplanes parked on the tarmac. The airplanes are positioned in a row, with one on the left, one in the center, and one on the right. The tarmac is divided into several sections by runways and taxiways, which are clearly marked with white lines. The surrounding area is mostly barren land with some patches of vegetation. On the left side of the image, there are several small buildings and structures, likely part of the airport facilities. The overall scene is a typical airport layout with aircraft, runways, and airport infrastructure.']
+['Is there any digit present in the bottom right corner of the scene?']
+['no']
+['How many aeroplanes are present in the scene?']
+airplane
+YOLO Count Result 2
+['What is the color of the digit painted on the landing strip?']
+['yellow']
+
+Filters: color=tan
+
+{'class': 'airplane', 'class_confidence': 1.0, 'spatial': None, 'size': None, 'ordinal': None, 'reference': None, 'color': 'tan', 'original_prompt': 'For each instance of the airplane in the image, provide the oriented bounding box.', 'pipeline': 'rule_based'}
+For each instance of the airplane in the image, provide the oriented bounding box.
+<PIL.Image.Image image mode=RGB size=512x512 at 0x7A9F7856F230>
+Grounding DINO found 5 boxes.
+Saved image with boxes to /home/Ubuntu/SUPARCO/Backend/public/image_with_boxes.jpg
+SAM generated 5 masks.
+Saved image with boxes to /home/Ubuntu/SUPARCO/Backend/public/image_with_mask.jpg
+Calculated 5 oriented boxes.
+[array([[  0,   0],
+       [511,   0],
+       [511, 511],
+       [  0, 511]]), array([[179,  38],
+       [211,  20],
+       [237,  66],
+       [205,  84]]), array([[179,  38],
+       [211,  20],
+       [237,  66],
+       [205,  84]]), array([[232, 105],
+       [238,  68],
+       [273,  73],
+       [268, 110]]), array([[235, 103],
+       [245,  68],
+       [277,  78],
+       [266, 112]])]
+[[[0, 0], [511, 0], [511, 511], [0, 511]], [[179, 38], [211, 20], [237, 66], [205, 84]], [[179, 38], [211, 20], [237, 66], [205, 84]], [[232, 105], [238, 68], [273, 73], [268, 110]], [[235, 103], [245, 68], [277, 78], [266, 112]]]
+{'yolo_predictions': [ultralytics.engine.results.Results object with attributes:
+
+boxes: None
+keypoints: None
+masks: None
+names: {0: 'airplane', 1: 'airport', 2: 'baseballfield', 3: 'basketballcourt', 4: 'bridge', 5: 'chimney', 6: 'dam', 7: 'expressway-service-area', 8: 'expressway-toll-station', 9: 'golffield', 10: 'groundtrackfield', 11: 'harbor', 12: 'overpass', 13: 'ship', 14: 'stadium', 15: 'storagetank', 16: 'tenniscourt', 17: 'trainstation', 18: 'vehicle', 19: 'windmill'}
+obb: ultralytics.engine.results.OBB object
+orig_img: array([[[ 47,  56,  78],
+        [ 47,  56,  76],
+        [ 46,  54,  74],
+        ...,
+        [ 49,  59,  79],
+        [ 52,  65,  86],
+        [ 49,  62,  84]],
+
+       [[ 47,  56,  76],
+        [ 47,  56,  76],
+        [ 44,  53,  74],
+        ...,
+        [ 51,  61,  79],
+        [ 51,  67,  86],
+        [ 51,  62,  86]],
+
+       [[ 48,  55,  74],
+        [ 46,  54,  74],
+        [ 43,  52,  74],
+        ...,
+        [ 51,  61,  81],
+        [ 51,  66,  86],
+        [ 51,  63,  90]],
+
+       ...,
+
+       [[ 36,  48,  75],
+        [ 38,  49,  74],
+        [ 37,  48,  76],
+        ...,
+        [ 62,  78, 103],
+        [ 64,  81, 105],
+        [ 68,  84, 109]],
+
+       [[ 37,  50,  75],
+        [ 38,  50,  75],
+        [ 37,  49,  75],
+        ...,
+        [ 63,  78, 104],
+        [ 63,  81, 104],
+        [ 66,  83, 108]],
+
+       [[ 37,  50,  75],
+        [ 38,  49,  75],
+        [ 37,  48,  75],
+        ...,
+        [ 64,  81, 106],
+        [ 64,  81, 104],
+        [ 65,  84, 109]]], shape=(512, 512, 3), dtype=uint8)
+orig_shape: (512, 512)
+path: '/home/Ubuntu/SUPARCO/Backend/public/image.jpg'
+probs: None
+save_dir: None
+speed: {'preprocess': 3.0424790165852755, 'inference': 9.359550982480869, 'postprocess': 2.5889649987220764}], 'gdino_predictions': [], 'pipeline_used': None, 'query': {'class': 'airplane', 'class_confidence': 1.0, 'spatial': None, 'size': None, 'ordinal': None, 'reference': None, 'color': 'tan', 'original_prompt': 'For each instance of the airplane in the image, provide the oriented bounding box.', 'pipeline': 'rule_based'}}
+[{'class_id': 0, 'class_name': 'airplane', 'confidence': 0.9171862006187439, 'corners': array([[     273.17,      108.48],
+       [     276.21,      72.813],
+       [     238.36,      69.586],
+       [     235.32,      105.26]], dtype=float32)}, {'class_id': 0, 'class_name': 'airplane', 'confidence': 0.8945053815841675, 'corners': array([[     198.91,      80.918],
+       [      236.2,        62.5],
+       [     215.84,      21.285],
+       [     178.55,      39.704]], dtype=float32)}]
+Filters: color=tan
+[]
+[{'corners': array([[  0,   0],
+       [511,   0],
+       [511, 511],
+       [  0, 511]])}, {'corners': array([[179,  38],
+       [211,  20],
+       [237,  66],
+       [205,  84]])}, {'corners': array([[179,  38],
+       [211,  20],
+       [237,  66],
+       [205,  84]])}, {'corners': array([[232, 105],
+       [238,  68],
+       [273,  73],
+       [268, 110]])}, {'corners': array([[235, 103],
+       [245,  68],
+       [277,  78],
+       [266, 112]])}]
+Filters: color=tan
+[{'corners': array([[235, 103],
+       [245,  68],
+       [277,  78],
+       [266, 112]]), 'color_ratio': 0.10105092966855295}]
+[[[235, 103], [245, 68], [277, 78], [266, 112]]]
+
+Grounding Result
+
+[[[235, 103], [245, 68], [277, 78], [266, 112]]]
+Grounding Objects
+[{'object_id': '1', 'obbox': [0.458984375, 0.201171875, 0.478515625, 0.1328125, 0.541015625, 0.15234375, 0.51953125, 0.21875]}]
+{'input_image': {'image_id': 'sample1.png', 'image_url': 'https://bit.ly/4ouV45l', 'metadata': {'width': 512, 'height': 512, 'spatial_resolution_m': 1.57}}, 'queries': {'caption_query': {'instruction': 'Describe key features in this image?', 'response': 'The image from GoogleEarth shows an aerial view of an airport with three airplanes parked on the tarmac. The airplanes are positioned in a row, with one on the left, one in the center, and one on the right. The tarmac is divided into several sections by runways and taxiways, which are clearly marked with white lines. The surrounding area is mostly barren land with some patches of vegetation. On the left side of the image, there are several small buildings and structures, likely part of the airport facilities. The overall scene is a typical airport layout with aircraft, runways, and airport infrastructure.'}, 'grounding_query': {'instruction': 'For each instance of the airplane in the image, provide the oriented bounding box.', 'response': [{'object-id': '1', 'obbox': [0.458984375, 0.201171875, 0.478515625, 0.1328125, 0.541015625, 0.15234375, 0.51953125, 0.21875]}]}, 'attribute_query': {'binary': {'instruction': 'Is there any digit present in the bottom right corner of the scene?', 'response': 'no'}, 'numeric': {'instruction': 'How many aeroplanes are present in the scene?', 'response': 2}, 'semantic': {'instruction': 'What is the color of the digit painted on the landing strip?', 'response': 'yellow'}}}}
+INFO:     223.231.220.166:57902 - "POST /eval HTTP/1.1" 200 OK

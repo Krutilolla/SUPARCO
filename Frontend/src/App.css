@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Hide scrollbars (WebKit browsers) */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Optional: Hide scrollbar buttons */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.floating-lines-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
